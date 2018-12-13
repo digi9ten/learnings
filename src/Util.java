@@ -1,23 +1,16 @@
+import java.util.Arrays;
+
 class Util {
 
+    /**
+     * This exists solely because you can't call an vararg function with primitive arrays.
+     *
+     * @param prefix
+     * @param numbers
+     */
     static void printNumbers(String prefix, int[] numbers) {
-        StringBuilder result = new StringBuilder(prefix + " : ");
-        for (int index = 0; index <= numbers.length - 1; index++) {
-            result.append(numbers[index]);
-            if (index < numbers.length - 1)
-                result.append(", ");
-        }
-        System.out.println(result.toString());
-    }
-
-    static void printChars(String prefix, char[] chars) {
-        StringBuilder result = new StringBuilder(prefix + " : ");
-        for (int index = 0; index <= chars.length - 1; index++) {
-            result.append(chars[index]);
-            if (index < chars.length - 1)
-                result.append(", ");
-        }
-        System.out.println(result.toString());
+        Integer[] nuArray = Arrays.stream(numbers).boxed().toArray(Integer[]::new);
+        printThese(prefix, nuArray);
     }
 
     @SafeVarargs
