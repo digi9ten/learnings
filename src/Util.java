@@ -13,6 +13,11 @@ class Util {
         printThese(prefix, nuArray);
     }
 
+    static void printNumbers(String prefix, long[] numbers) {
+        Long[] nuArray = Arrays.stream(numbers).boxed().toArray(Long[]::new);
+        printThese(prefix, nuArray);
+    }
+
     @SafeVarargs
     static <T> void printThese(String prefix, T... items) {
         StringBuilder result = new StringBuilder(prefix + " : ");
