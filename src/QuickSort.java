@@ -10,6 +10,7 @@ public class QuickSort {
         int pivot = numbers[right];
         int lowestValIndex = (left - 1);
 
+        // moving items smaller than pivot to the left...
         for (int index = left; index <= right - 1; index++) {
             if (numbers[index] <= pivot) {
                 lowestValIndex++;
@@ -17,9 +18,12 @@ public class QuickSort {
             }
         }
 
-        swap(numbers, lowestValIndex + 1, right);
+        // we've found a new lower value...
+        lowestValIndex++;
+        // swap that and the current pivot...
+        swap(numbers, lowestValIndex, right);
 
-        return lowestValIndex + 1;
+        return lowestValIndex;
     }
 
     private static void quickSort(int[] numbers, int left, int right) {
