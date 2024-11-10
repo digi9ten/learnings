@@ -11,7 +11,7 @@ import java.util.List;
  * but these centurial years are leap years if they are exactly divisible by 400. For example, the years 1700, 1800,
  * and 1900 are not leap years, but the year 2000
  *
- * @apiNote https://en.wikipedia.org/wiki/Gregorian_calendar
+ * @apiNote <a href="https://en.wikipedia.org/wiki/Gregorian_calendar">...</a>
  */
 public class FindLeapYears {
 
@@ -24,9 +24,9 @@ public class FindLeapYears {
             throw new IllegalArgumentException("start cannot be larger than end");
         }
 
-        List<Integer> results = new ArrayList<Integer>();
+        List<Integer> results = new ArrayList<>();
 
-        Integer currentYear = start;
+        int currentYear = start;
         do {
             if (0 == currentYear % 400 || (0 == currentYear % 4 && 0 != currentYear % 100))
                 results.add(currentYear);

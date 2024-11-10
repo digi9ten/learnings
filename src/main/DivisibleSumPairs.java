@@ -5,9 +5,9 @@ import java.util.*;
 /**
  * You are given an array of n integers a0, a1, .. an and a positive integer k.
  * Find and print the number of pairs (i,j) where i<j and i+j is evenly divisible by k (Which is i+j % k == 0).
- * Hackerrank problem - https://www.hackerrank.com/challenges/divisible-sum-pairs/problem.
+ * Hackerrank problem - <a href="https://www.hackerrank.com/challenges/divisible-sum-pairs/problem">...</a>.
  * <br>
- * Great explanation of the O(n) solution here - https://cs.stackexchange.com/a/60636
+ * Great explanation of the O(n) solution here - <a href="https://cs.stackexchange.com/a/60636">...</a>
  * <br/>
  * If you run the time tests, you can literally compare the result size produced between
  * the bruth force and the better versions.
@@ -76,19 +76,16 @@ public class DivisibleSumPairs {
             // If remainder with current element divides k into two halves.
             if (k == 2 * rem) {
                 // Then there must be even occurrences of such remainder
-                if (1 == freq.get(rem) % 2)
-                    continue;
+                if (1 == freq.get(rem) % 2) ;
 
                 // If remainder is 0, then there must be two elements with 0 remainder
             } else if (0 == rem) {
                 // Then there must be even occurrences of such remainder
-                if (1 == freq.get(rem) % 2)
-                    continue;
+                if (1 == freq.get(rem) % 2) ;
 
                 // Else number of occurrences of remainder must be equal to number of occurrences of k - remainder
             } else {
-                if (freq.get(k - rem) != freq.get(rem))
-                    continue;
+                if (!freq.get(k - rem).equals(freq.get(rem))) ;
             }
         }
 

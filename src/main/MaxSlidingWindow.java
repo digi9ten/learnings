@@ -5,7 +5,7 @@ import java.util.ArrayDeque;
 public class MaxSlidingWindow {
 
     private static ArrayDeque<Integer> findMaxSlidingWindow(int[] array, int windowSize) {
-        ArrayDeque<Integer> result = new ArrayDeque<Integer>();
+        ArrayDeque<Integer> result = new ArrayDeque<>();
         int maxFound = 0;
 
         for (int index = 1; index < array.length; index++) {
