@@ -20,8 +20,7 @@ public class MigratoryBirds {
         int highestCountSoFar = 0;
 //        int keyOfHighestCountSoFar = 0;
 
-        for (int index = 0; index < arr.size(); index++) {
-            Integer current = arr.get(index);
+        for (Integer current : arr) {
             Integer inResults = results.get(current);
             if (null == inResults) {
                 inResults = 0;

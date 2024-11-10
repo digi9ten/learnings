@@ -59,7 +59,7 @@ public class QuickSort {
         runSortAndPrintResults(new int[]{100, 40, 3, 56, 32, 19, 72, 16});
     }
 
-    class ListNode {
+    static class ListNode {
         int val;
         ListNode next;
 
@@ -69,7 +69,7 @@ public class QuickSort {
         }
     }
 
-    public ListNode deleteDuplicates(ListNode node) {
+    protected ListNode deleteDuplicates(ListNode node) {
         ListNode a = node, b;
 
         while (null != a && null != a.next) {

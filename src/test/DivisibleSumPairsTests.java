@@ -32,12 +32,12 @@ public class DivisibleSumPairsTests {
         int collectionSize = largerCollection.size();
 
         Instant instantA = Instant.now();
-        int foo = bruteForceDivisibleSumPairs(collectionSize, 3, largerCollection);
+        bruteForceDivisibleSumPairs(collectionSize, 3, largerCollection);
         Instant instantB = Instant.now();
         Duration bruteRun = Duration.between(instantA, instantB);
 
         instantA = Instant.now();
-        int bar = betterDivisibleSumPairs(collectionSize, 3, largerCollection);
+        betterDivisibleSumPairs(collectionSize, 3, largerCollection);
         instantB = Instant.now();
         Duration betterRun = Duration.between(instantA, instantB);
 

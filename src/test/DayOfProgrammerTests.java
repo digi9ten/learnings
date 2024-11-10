@@ -30,8 +30,7 @@ public class DayOfProgrammerTests {
 
     @Test
     void testBadParameter() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
-                () -> DayOfProgrammer.findDOPForYear(-5));
+        assertThrows(IllegalArgumentException.class, () -> DayOfProgrammer.findDOPForYear(-5));
 
     }
 }

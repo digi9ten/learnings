@@ -53,9 +53,9 @@ public class DayOfProgrammer {
             }
         } else {
             if (0 == year % 400 || (0 == year % 4 && 0 != year % 100)) {
-                //ld = ld.plusDays(1);
+
             } else {
-                //ld = ld.minusDays(1);
+
             }
         }
 

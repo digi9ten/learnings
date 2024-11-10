@@ -46,7 +46,7 @@ public class ManipulateLinkedList {
             result.append(" - ");
             node = node.next;
         }
-        System.out.println(result.toString());
+        System.out.println(result);
     }
 
     public static void main(String[] args) {
