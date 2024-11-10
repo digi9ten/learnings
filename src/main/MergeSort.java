@@ -1,3 +1,5 @@
+package main;
+
 public class MergeSort {
 
     private static void mergeSort(int[] numbers, int left, int right) {
@@ -44,7 +46,7 @@ public class MergeSort {
     private static void runSortAndPrintResults(int[] numbers) {
         Util.printNumbers("Starting Values", numbers);
         mergeSort(numbers, 0, numbers.length - 1);
-        Util.printNumbers("Final Result", numbers);
+        Util.printNumbers("Final main.Result", numbers);
     }
 
     public static void main(String[] args) {

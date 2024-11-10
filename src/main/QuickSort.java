@@ -1,3 +1,5 @@
+package main;
+
 public class QuickSort {
 
     private static void swap(int[] numbers, int indexA, int indexB) {
@@ -38,7 +40,7 @@ public class QuickSort {
     private static void runSortAndPrintResults(int[] numbers) {
         Util.printNumbers("Starting Values", numbers);
         quickSort(numbers, 0, numbers.length - 1);
-        Util.printNumbers("Final Result", numbers);
+        Util.printNumbers("Final main.Result", numbers);
     }
 
     public static void main(String[] args) {
